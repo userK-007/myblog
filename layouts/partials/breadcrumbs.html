@@ -1,0 +1,30 @@
+{{- if not .IsHome -}}
+<div class="breadcrumbs">
+  <a href="{{ .Site.BaseURL }}">首页</a>
+
+  <!-- 显示栏目层级 -->
+  {{- $section := .Section -}}
+  {{- if $section -}}
+    {{- $sectionPage := .Site.GetPage "/" $section -}}
+    {{- if $sectionPage -}}
+      <span class="separator">/</span>
+      <a href="{{ $sectionPage.Permalink }}">{{ $sectionPage.LinkTitle }}</a>
+    {{- end -}}
+  {{- end -}}
+
+  <!-- 显示分类层级 -->
+  {{- $categories := .GetTerms "categories" -}}
+  {{- if $categories -}}
+    {{- range $categories -}}
+      <span class="separator">/</span>
+      <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+    {{- end -}}
+  {{- end -}}
+
+  <!-- 当前页面标题 -->
+  {{- if .IsPage }}
+    <span class="separator">/</span>
+    <span class="current">{{ .LinkTitle }}</span>
+  {{- end }}
+</div>
+{{- end -}}

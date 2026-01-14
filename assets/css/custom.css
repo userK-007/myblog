@@ -1,0 +1,190 @@
+/* 正规风格（技术和金融） */
+.article-content.regular-style {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.8;
+  color: #333;
+}
+
+.article-content.regular-style h1,
+.article-content.regular-style h2,
+.article-content.regular-style h3 {
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5em;
+}
+
+.article-content.regular-style code {
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+.article-content.regular-style pre {
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+.article-content.regular-style blockquote {
+  border-left: 4px solid #3498db;
+  padding-left: 1em;
+  margin-left: 0;
+  color: #555;
+  font-style: italic;
+}
+
+/* 狂野风格（狂人日记） */
+.article-content.madness-style {
+  font-family: "Comic Sans MS", "Marker Felt", "Arial Black", sans-serif;
+  line-height: 2;
+  color: #1a1a1a;
+  background: linear-gradient(45deg, #fff 25%, #f9f9f9 25%, #f9f9f9 50%, #fff 50%, #fff 75%, #f9f9f9 75%, #f9f9f9);
+  background-size: 20px 20px;
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.article-content.madness-style h1 {
+  font-size: 2.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #e74c3c;
+  text-shadow: 3px 3px 0px #c0392b, 6px 6px 0px #a93226;
+  transform: rotate(-2deg);
+  margin: 1em 0;
+}
+
+.article-content.madness-style h2 {
+  font-size: 2em;
+  font-weight: 800;
+  color: #9b59b6;
+  text-shadow: 2px 2px 0px #8e44ad;
+  transform: rotate(1deg);
+  margin: 1.5em 0;
+}
+
+.article-content.madness-style h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #f39c12;
+  text-shadow: 1px 1px 0px #e67e22;
+  transform: rotate(-1deg);
+  margin: 1em 0;
+}
+
+.article-content.madness-style p {
+  font-size: 1.1em;
+  margin: 1em 0;
+  text-align: justify;
+  transform: rotate(0.5deg);
+}
+
+.article-content.madness-style p:nth-child(even) {
+  transform: rotate(-0.5deg);
+}
+
+.article-content.madness-style code {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  transform: rotate(-1deg);
+  display: inline-block;
+}
+
+.article-content.madness-style pre {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: 3px dashed #e74c3c;
+  border-radius: 20px;
+  padding: 1.5em;
+  overflow-x: auto;
+  transform: rotate(1deg);
+  box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+.article-content.madness-style blockquote {
+  border-left: 8px solid #e74c3c;
+  border-right: 8px solid #3498db;
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  background: linear-gradient(90deg, #fff5f5 0%, #f0f8ff 100%);
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  transform: rotate(-1deg);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+.article-content.madness-style strong {
+  color: #e74c3c;
+  font-weight: 900;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+}
+
+.article-content.madness-style em {
+  color: #9b59b6;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* 分类页面样式 */
+.category-tech,
+.category-finance {
+  background: #f8f9fa;
+  padding: 2em;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.category-madness {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2em;
+  border-radius: 20px;
+  border: 5px dashed #fff;
+  color: #fff;
+  box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
+}
+
+/* Tag标签样式 */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 1em 0;
+}
+
+.tag-item {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  background: #3498db;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+.tag-item:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.tag-item.madness-tag {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  font-weight: bold;
+  border: 2px solid #fff;
+}
+
+.tag-item.madness-tag:hover {
+  transform: rotate(5deg) scale(1.1);
+}
