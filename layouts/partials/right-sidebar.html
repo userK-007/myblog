@@ -6,8 +6,10 @@
 
   {{- range $name, $terms := $categories -}}
   <div class="category-item">
-    <a href="/categories/{{ $name | urlize }}/">{{ $name }}</a>
-    <span class="count">({{ len $terms }})</span>
+    <a href="/categories/{{ $name | urlize }}/">
+      <span class="category-name">{{ $name }}</span>
+      <span class="count">({{ len $terms }})</span>
+    </a>
   </div>
   {{- end -}}
 </div>

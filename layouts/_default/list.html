@@ -57,10 +57,8 @@
 
 {{- $class := "post-entry" }}
 
-{{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
-{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
-{{- $class = "first-entry" }}
-{{- else if $term }}
+{{- /* 首页所有文章统一使用 post-entry 样式，不再使用 first-entry */ -}}
+{{- if $term }}
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 
@@ -117,7 +115,6 @@
 </footer>
 {{- end }}
   </div>
-  {{- partial "right-sidebar.html" . }}
 </div>
 
 {{- end }}{{/* end profileMode */}}

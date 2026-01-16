@@ -1,19 +1,16 @@
 baseURL = 'https://yourusername.github.io/'
 languageCode = 'zh-cn'
-title = '我的个人博客'
+title = '柚子王的个人博客'
 theme = 'PaperMod'
 
 [params]
   env = 'production'
-  title = '我的个人博客'
+  title = '柚子王的个人博客'
   description = '技术、金融与狂人日记'
   keywords = ['博客', '技术', '金融', '随笔']
-  author = 'Your Name'
+  author = 'Pomelo King'
   images = ['/logo.png']
   
-  # 主页配置
-  homeInfoParams.Title = '欢迎来到我的博客'
-  homeInfoParams.Content = '这里记录技术思考、金融观察和狂人日记'
   
   # 社交链接
   ShowReadingTime = true

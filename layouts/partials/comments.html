@@ -10,9 +10,38 @@
         data-reactions-enabled="{{ .Site.Params.Comments.giscus.reactionsEnabled | default "1" }}"
         data-emit-metadata="{{ .Site.Params.Comments.giscus.emitMetadata | default "0" }}"
         data-input-position="{{ .Site.Params.Comments.giscus.inputPosition | default "bottom" }}"
-        data-theme="{{ .Site.Params.Comments.giscus.theme | default "light" }}"
+        data-theme="preferred_color_scheme"
         data-lang="{{ .Site.LanguageCode | default "zh-CN" }}"
         crossorigin="anonymous"
         async>
+</script>
+<script>
+  // 监听主题切换，更新Giscus主题
+  document.addEventListener('DOMContentLoaded', function() {
+    const updateGiscusTheme = () => {
+      const theme = document.documentElement.getAttribute('data-theme');
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      }
+    };
+
+    // 监听主题切换按钮点击
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        setTimeout(updateGiscusTheme, 100);
+      });
+    }
+
+    // 初始化时设置主题
+    updateGiscusTheme();
+  });
 </script>
 {{- end }}

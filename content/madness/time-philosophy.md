@@ -1,6 +1,6 @@
 ---
 title: "时间是一种幻觉"
-date: 2026-01-11
+date: 2026-01-26
 draft: false
 categories: ["狂人日记"]
 tags: ["哲学", "时间", "存在"]
