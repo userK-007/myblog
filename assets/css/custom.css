@@ -17,8 +17,8 @@
 } /* 结束标题样式块 */
 
 .article-content.regular-style code { /* 选择器：在 regular-style 容器内的 code 元素（行内代码） */
-  background-color: var(--secondary); /* 背景色：使用CSS变量，跟随系统主题 */
-  color: var(--primary); /* 文字颜色：使用CSS变量，跟随系统主题 */
+  background-color: #666; /* 背景色：灰色 */
+  color: #fff; /* 文字颜色：白色 */
   padding: 2px 6px; /* 内边距：上下2像素，左右6像素，给代码文字周围留出空间 */
   border-radius: 3px; /* 圆角：3像素的圆角，让代码块看起来更柔和 */
   font-family: "Consolas", "Monaco", "Courier New", monospace; /* 字体族：等宽字体，确保代码对齐和可读性 */
@@ -26,12 +26,20 @@
 } /* 结束行内代码样式块 */
 
 .article-content.regular-style pre { /* 选择器：在 regular-style 容器内的 pre 元素（代码块） */
-  background-color: var(--secondary); /* 背景色：使用CSS变量，跟随系统主题 */
-  border: 1px solid var(--border); /* 边框：使用CSS变量，跟随系统主题 */
+  background-color: #444; /* 背景色：灰色 */
+  border: 1px solid #666; /* 边框：灰色 */
   border-radius: 5px; /* 圆角：5像素的圆角，比行内代码的圆角更大 */
   padding: 1em; /* 内边距：1倍字体大小的内边距（上下左右都是），给代码内容留出呼吸空间 */
   overflow-x: auto; /* 水平溢出：当代码行太长时，自动显示横向滚动条而不是换行 */
 } /* 结束代码块样式块 */
+
+.article-content.regular-style pre code { /* 选择器：在 regular-style 容器内的 pre 元素中的 code 元素（代码块内的代码） */
+  background-color: transparent; /* 背景色：透明，继承父元素的背景色 */
+  color: #fff; /* 文字颜色：白色 */
+  padding: 0; /* 内边距：0，继承父元素的内边距 */
+  border-radius: 0; /* 圆角：0，继承父元素的圆角 */
+  font-size: 0.9em; /* 字体大小：相对父元素字体大小的90%，让代码稍小一些 */
+}
 
 .article-content.regular-style blockquote { /* 选择器：在 regular-style 容器内的 blockquote 元素（引用块） */
   border-left: 4px solid var(--theme); /* 左边框：使用CSS变量，跟随系统主题 */
