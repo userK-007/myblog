@@ -1,6 +1,6 @@
 ---
 title: "技术"
-description: "技术文章 - 这里是码农的自留地"
+description: "互联网相关"
 type: "tech"
 ---
 ---

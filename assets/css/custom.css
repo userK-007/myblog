@@ -2,7 +2,7 @@
 .article-content.regular-style { /* 选择器：选择同时具有 article-content 和 regular-style 两个类的元素（用于技术和金融文章） */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; /* 字体族：按优先级使用系统字体，从苹果系统字体到通用无衬线字体，确保跨平台显示效果 */
   line-height: 1.8; /* 行高：设置为字体大小的1.8倍，让文字行间距更宽松，提高可读性 */
-  color: #333; /* 文字颜色：深灰色（RGB值接近黑色但稍浅），提供良好的阅读对比度 */
+  color: var(--primary); /* 文字颜色：使用CSS变量，跟随系统主题 */
 } /* 结束 regular-style 样式块 */
 
 .article-content.regular-style h1, /* 选择器：在 regular-style 容器内的 h1 标题 */
@@ -11,13 +11,14 @@
   font-weight: 600; /* 字体粗细：半粗体（介于正常400和粗体700之间），让标题更醒目但不至于太粗 */
   margin-top: 2em; /* 上边距：2倍字体大小的间距，在标题上方留出足够空间 */
   margin-bottom: 1em; /* 下边距：1倍字体大小的间距，在标题下方留出空间 */
-  color: #2c3e50; /* 标题颜色：深蓝灰色，比正文颜色更深，突出标题重要性 */
-  border-bottom: 2px solid #3498db; /* 底部边框：2像素宽的实线蓝色边框，在标题下方添加装饰线 */
+  color: var(--primary); /* 标题颜色：使用CSS变量，跟随系统主题 */
+  border-bottom: 2px solid var(--theme); /* 底部边框：使用CSS变量，跟随系统主题 */
   padding-bottom: 0.5em; /* 下内边距：0.5倍字体大小，让标题文字和底部边框之间有空隙 */
 } /* 结束标题样式块 */
 
 .article-content.regular-style code { /* 选择器：在 regular-style 容器内的 code 元素（行内代码） */
-  background-color: #f4f4f4; /* 背景色：浅灰色，让代码块在正文中更突出 */
+  background-color: var(--secondary); /* 背景色：使用CSS变量，跟随系统主题 */
+  color: var(--primary); /* 文字颜色：使用CSS变量，跟随系统主题 */
   padding: 2px 6px; /* 内边距：上下2像素，左右6像素，给代码文字周围留出空间 */
   border-radius: 3px; /* 圆角：3像素的圆角，让代码块看起来更柔和 */
   font-family: "Consolas", "Monaco", "Courier New", monospace; /* 字体族：等宽字体，确保代码对齐和可读性 */
@@ -25,18 +26,18 @@
 } /* 结束行内代码样式块 */
 
 .article-content.regular-style pre { /* 选择器：在 regular-style 容器内的 pre 元素（代码块） */
-  background-color: #f8f8f8; /* 背景色：比行内代码稍浅的灰色，区分代码块和行内代码 */
-  border: 1px solid #e0e0e0; /* 边框：1像素宽的浅灰色实线边框，给代码块添加边界 */
+  background-color: var(--secondary); /* 背景色：使用CSS变量，跟随系统主题 */
+  border: 1px solid var(--border); /* 边框：使用CSS变量，跟随系统主题 */
   border-radius: 5px; /* 圆角：5像素的圆角，比行内代码的圆角更大 */
   padding: 1em; /* 内边距：1倍字体大小的内边距（上下左右都是），给代码内容留出呼吸空间 */
   overflow-x: auto; /* 水平溢出：当代码行太长时，自动显示横向滚动条而不是换行 */
 } /* 结束代码块样式块 */
 
 .article-content.regular-style blockquote { /* 选择器：在 regular-style 容器内的 blockquote 元素（引用块） */
-  border-left: 4px solid #3498db; /* 左边框：4像素宽的蓝色实线，作为引用块的视觉标识 */
+  border-left: 4px solid var(--theme); /* 左边框：使用CSS变量，跟随系统主题 */
   padding-left: 1em; /* 左内边距：1倍字体大小，让文字和左边框保持距离 */
   margin-left: 0; /* 左外边距：0，让引用块紧贴容器左边缘 */
-  color: #555; /* 文字颜色：中灰色，比正文稍浅，表示这是引用内容 */
+  color: var(--secondary); /* 文字颜色：使用CSS变量，跟随系统主题 */
   font-style: italic; /* 字体样式：斜体，进一步标识这是引用内容 */
 } /* 结束引用块样式块 */
 
@@ -44,12 +45,8 @@
 .article-content.madness-style { /* 选择器：选择同时具有 article-content 和 madness-style 两个类的元素（用于狂人日记文章） */
   font-family: "Comic Sans MS", "Marker Felt", "Arial Black", sans-serif; /* 字体族：使用非正式、有趣的字体，从 Comic Sans（漫画字体）到粗体无衬线字体 */
   line-height: 2; /* 行高：2倍字体大小，比正规风格更宽松的行间距 */
-  color: #1a1a1a; /* 文字颜色：接近黑色的深灰色，确保文字清晰可读 */
-  background: linear-gradient(45deg, #fff 25%, #f9f9f9 25%, #f9f9f9 50%, #fff 50%, #fff 75%, #f9f9f9 75%, #f9f9f9); /* 背景：45度角的线性渐变，创建棋盘格图案（白色和浅灰色交替） */
-  background-size: 20px 20px; /* 背景尺寸：每个棋盘格单元为20x20像素 */
-  padding: 2em; /* 内边距：2倍字体大小的内边距（上下左右），给内容留出大量空间 */
-  border-radius: 15px; /* 圆角：15像素的大圆角，让容器看起来更圆润 */
-  box-shadow: 0 0 20px rgba(0,0,0,0.1); /* 阴影：无偏移的阴影，20像素模糊半径，10%透明度的黑色，给容器添加立体感 */
+  color: var(--primary); /* 文字颜色：使用CSS变量，跟随系统主题 */
+  padding: 1em 0; /* 内边距：只保留上下内边距，左右不设 */
 } /* 结束 madness-style 基础样式块 */
 
 .article-content.madness-style h1 { /* 选择器：在 madness-style 容器内的 h1 标题 */
