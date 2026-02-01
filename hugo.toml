@@ -73,6 +73,12 @@ theme = 'PaperMod'
   url = '/tags/'
   weight = 4
 
+[[menu.main]]
+  identifier = 'search'
+  name = '搜索'
+  url = '/search/'
+  weight = 5
+
 # 分类配置
 [taxonomies]
   category = 'categories'
