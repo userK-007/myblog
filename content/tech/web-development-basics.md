@@ -2,11 +2,9 @@
 title: "Web开发基础知识"
 date: 2026-01-26
 draft: false
-categories: ["技术"]
 tags: ["web开发", "html", "css", "javascript"]
 description: "Web开发的基础知识，包括HTML、CSS和JavaScript"
 ---
-# Web开发基础知识
 
 Web开发是创建网站和Web应用程序的过程，主要涉及HTML、CSS和JavaScript三种核心技术。
 

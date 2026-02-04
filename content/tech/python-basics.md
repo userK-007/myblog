@@ -1,13 +1,10 @@
 ---
-title: "Python基础教程"
+title: "Python基础知识"
 date: 2026-01-26
 draft: false
-categories: ["技术"]
 tags: ["python", "编程", "基础"]
-description: "Python编程语言的基础知识和常用功能"
+description: "Python的基础知识和应用场景"
 ---
-
-# Python基础教程
 
 Python是一种简单易学、功能强大的编程语言，广泛应用于Web开发、数据分析、人工智能等领域。
 

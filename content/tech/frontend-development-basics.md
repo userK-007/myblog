@@ -2,12 +2,9 @@
 title: "前端开发基础知识"
 date: 2026-01-26
 draft: false
-categories: ["技术"]
 tags: ["前端开发", "HTML", "CSS", "JavaScript", "前端框架"]
 description: "前端开发的基础知识和核心技术"
 ---
-
-# 前端开发基础知识
 
 前端开发是创建网站和Web应用程序用户界面的过程，主要涉及HTML、CSS和JavaScript三种核心技术。
 

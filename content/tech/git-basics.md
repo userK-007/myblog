@@ -2,12 +2,9 @@
 title: "Git基础回顾"
 date: 2026-01-26
 draft: false
-categories: ["技术"]
 tags: ["git", "版本控制", "开发工具"]
 description: "Git版本控制系统的基础知识和常用命令"
 ---
-
-# Git基础回顾
 
 Git是目前最流行的分布式版本控制系统，掌握Git的基础操作是每个开发者的必备技能。
 
