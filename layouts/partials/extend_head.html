@@ -4,3 +4,10 @@
 {{- $customCSS = $customCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}" integrity="{{ $customCSS.Data.Integrity }}">
 {{- end }}
+
+{{- /* 引入滚动监听JS */ -}}
+{{- $scrollJS := resources.Get "js/scroll.js" }}
+{{- if $scrollJS }}
+{{- $scrollJS = $scrollJS | minify | fingerprint }}
+<script src="{{ $scrollJS.RelPermalink }}" integrity="{{ $scrollJS.Data.Integrity }}"></script>
+{{- end }}

@@ -48,16 +48,12 @@
 
 {{- $paginator := .Paginate $pages }}
 
-{{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
-{{- partial "home_info.html" . }}
-{{- end }}
-
 {{- $term := .Data.Term }}
+
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}
 
-{{- /* 首页所有文章统一使用 post-entry 样式，不再使用 first-entry */ -}}
 {{- if $term }}
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
@@ -114,8 +110,15 @@
   </nav>
 </footer>
 {{- end }}
+
   </div>
 </div>
+
+{{- if and site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
+<aside class="home-sidebar-fixed">
+  {{- partial "home_info.html" . }}
+</aside>
+{{- end }}
 
 {{- end }}{{/* end profileMode */}}
 

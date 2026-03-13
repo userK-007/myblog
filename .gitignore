@@ -13,6 +13,7 @@ package-lock.json
 *.swp
 *.swo
 *~
+.qoder
 
 # OS
 .DS_Store

@@ -3,7 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main  # 设置你的默认分支名称
+      - master  # 设置你的默认分支名称
   workflow_dispatch:
 
 permissions:

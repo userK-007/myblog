@@ -1,18 +1,44 @@
-baseURL = 'https://yourusername.github.io/'
+baseURL = 'https://userK-007.github.io/myblog/'
 languageCode = 'zh-cn'
-title = '柚子王的个人博客'
+title = 'userK-007的个人博客'
 theme = 'PaperMod'
+ignoreErrors = ['error-output-taxonomy']
 
 [params]
   env = 'production'
-  title = '柚子王的个人博客'
   description = '技术、金融与狂人日记'
+  mainSections = ['tech', 'finance', 'madness']
   keywords = ['博客', '技术', '金融', '随笔']
-  author = 'Pomelo King'
+  author = 'userK-007'
   images = ['/logo.png']
   
-  
   # 社交链接
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/userK-007"
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/yourusername"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/yourusername"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:Chatgptlaoliu@proton.me"
+  
+  [params.profileMode]
+    enabled = false
+
+  # 首页信息
+  [params.homeInfoParams]
+    title = "userK-007"
+    imageUrl = "/blogAvatar.png"
+    email = "Chatgptlaoliu@proton.me"
+    git = "https://github.com/userK-007"
+    telegram = "https://t.me/yourusername"
+    x = "https://twitter.com/yourusername"
+    aboutme = "/about/"
+  
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
@@ -20,33 +46,28 @@ theme = 'PaperMod'
   ShowWordCount = true
   ShowRssButtonInSectionTermList = true
   UseHugoToc = true
-  disableSpecial1stPost = false
-  disableScrollToTop = false
-  
-  # 评论系统 - Giscus
+
   comments = true
-  
   [params.Comments.giscus]
-    repo = "yourusername/your-repo"  # 替换为你的GitHub仓库
-    repoId = "R_xxxxxxxxxx"  # 需要从Giscus获取
+    repo = "userK-007/myblog"
+    repoId = "R_xxxxxxxxxx"
     category = "General"
-    categoryId = "DIC_kwxxxxxxxxxx"  # 需要从Giscus获取
+    categoryId = "DIC_kwxxxxxxxxxx"
     mapping = "pathname"
     strict = "0"
     reactionsEnabled = "1"
     emitMetadata = "0"
     inputPosition = "bottom"
-    theme = "light"
-  
-  # 搜索功能
+
   [params.fuseOpts]
     isCaseSensitive = false
     shouldSort = true
     location = 0
     distance = 1000
     threshold = 0.4
-    minMatchCharLength = 0
-    keys = ["title", "permalink", "summary", "content"]
+    minMatchCharLength = 1
+    limit = 20
+    keys = ["title", "summary", "content"]
 
 # 菜单配置
 [[menu.main]]

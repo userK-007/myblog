@@ -1,279 +1,219 @@
-/* 正规风格（技术和金融） */ /* 这是CSS注释，用于标识下面代码块的作用：定义技术和金融类文章的正式、专业风格 */
-.article-content.regular-style { /* 选择器：选择同时具有 article-content 和 regular-style 两个类的元素（用于技术和金融文章） */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; /* 字体族：按优先级使用系统字体，从苹果系统字体到通用无衬线字体，确保跨平台显示效果 */
-  line-height: 1.8; /* 行高：设置为字体大小的1.8倍，让文字行间距更宽松，提高可读性 */
-  color: var(--primary); /* 文字颜色：使用CSS变量，跟随系统主题 */
-} /* 结束 regular-style 样式块 */
-
-.article-content.regular-style h1, /* 选择器：在 regular-style 容器内的 h1 标题 */
-.article-content.regular-style h2, /* 选择器：在 regular-style 容器内的 h2 标题 */
-.article-content.regular-style h3 { /* 选择器：在 regular-style 容器内的 h3 标题（三个选择器用逗号分隔，表示共用同一套样式） */
-  font-weight: 600; /* 字体粗细：半粗体（介于正常400和粗体700之间），让标题更醒目但不至于太粗 */
-  margin-top: 2em; /* 上边距：2倍字体大小的间距，在标题上方留出足够空间 */
-  margin-bottom: 1em; /* 下边距：1倍字体大小的间距，在标题下方留出空间 */
-  color: var(--primary); /* 标题颜色：使用CSS变量，跟随系统主题 */
-  border-bottom: 2px solid var(--theme); /* 底部边框：使用CSS变量，跟随系统主题 */
-  padding-bottom: 0.5em; /* 下内边距：0.5倍字体大小，让标题文字和底部边框之间有空隙 */
-} /* 结束标题样式块 */
-
-.article-content.regular-style code { /* 选择器：在 regular-style 容器内的 code 元素（行内代码） */
-  background-color: #666; /* 背景色：灰色 */
-  color: #fff; /* 文字颜色：白色 */
-  padding: 2px 6px; /* 内边距：上下2像素，左右6像素，给代码文字周围留出空间 */
-  border-radius: 3px; /* 圆角：3像素的圆角，让代码块看起来更柔和 */
-  font-family: "Consolas", "Monaco", "Courier New", monospace; /* 字体族：等宽字体，确保代码对齐和可读性 */
-  font-size: 0.9em; /* 字体大小：相对父元素字体大小的90%，让代码稍小一些 */
-} /* 结束行内代码样式块 */
-
-.article-content.regular-style pre { /* 选择器：在 regular-style 容器内的 pre 元素（代码块） */
-  background-color: #444; /* 背景色：灰色 */
-  border: 1px solid #666; /* 边框：灰色 */
-  border-radius: 5px; /* 圆角：5像素的圆角，比行内代码的圆角更大 */
-  padding: 1em; /* 内边距：1倍字体大小的内边距（上下左右都是），给代码内容留出呼吸空间 */
-  overflow-x: auto; /* 水平溢出：当代码行太长时，自动显示横向滚动条而不是换行 */
-} /* 结束代码块样式块 */
-
-.article-content.regular-style pre code { /* 选择器：在 regular-style 容器内的 pre 元素中的 code 元素（代码块内的代码） */
-  background-color: transparent; /* 背景色：透明，继承父元素的背景色 */
-  color: #fff; /* 文字颜色：白色 */
-  padding: 0; /* 内边距：0，继承父元素的内边距 */
-  border-radius: 0; /* 圆角：0，继承父元素的圆角 */
-  font-size: 0.9em; /* 字体大小：相对父元素字体大小的90%，让代码稍小一些 */
+.home-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
 }
 
-.article-content.regular-style blockquote { /* 选择器：在 regular-style 容器内的 blockquote 元素（引用块） */
-  border-left: 4px solid var(--theme); /* 左边框：使用CSS变量，跟随系统主题 */
-  padding-left: 1em; /* 左内边距：1倍字体大小，让文字和左边框保持距离 */
-  margin-left: 0; /* 左外边距：0，让引用块紧贴容器左边缘 */
-  color: var(--secondary); /* 文字颜色：使用CSS变量，跟随系统主题 */
-  font-style: italic; /* 字体样式：斜体，进一步标识这是引用内容 */
-} /* 结束引用块样式块 */
+.home-info-content {
+    max-width: 800px;
+    width: 100%;
+}
 
-/* 狂野风格（狂人日记） */ /* CSS注释：标识下面代码块的作用：定义"狂人日记"类文章的夸张、非正式风格 */
-.article-content.madness-style { /* 选择器：选择同时具有 article-content 和 madness-style 两个类的元素（用于狂人日记文章） */
-  font-family: "Comic Sans MS", "Marker Felt", "Arial Black", sans-serif; /* 字体族：使用非正式、有趣的字体，从 Comic Sans（漫画字体）到粗体无衬线字体 */
-  line-height: 2; /* 行高：2倍字体大小，比正规风格更宽松的行间距 */
-  color: var(--primary); /* 文字颜色：使用CSS变量，跟随系统主题 */
-  padding: 1em 0; /* 内边距：只保留上下内边距，左右不设 */
-} /* 结束 madness-style 基础样式块 */
+.home-info-avatar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.article-content.madness-style h1 { /* 选择器：在 madness-style 容器内的 h1 标题 */
-  font-size: 2.5em; /* 字体大小：2.5倍父元素字体大小，非常大的标题 */
-  font-weight: 900; /* 字体粗细：最粗（900），让标题非常醒目 */
-  text-transform: uppercase; /* 文本转换：将所有字母转为大写，增强视觉冲击力 */
-  color: #e74c3c; /* 标题颜色：红色，非常醒目 */
-  text-shadow: 3px 3px 0px #c0392b, 6px 6px 0px #a93226; /* 文字阴影：两层阴影效果，第一层向右下偏移3像素深红色，第二层偏移6像素更深红色，创建3D效果 */
-  transform: rotate(-2deg); /* 变换：逆时针旋转2度，让标题看起来有点倾斜，增加动感 */
-  margin: 1em 0; /* 外边距：上下各1倍字体大小的间距 */
-} /* 结束 h1 标题样式块 */
+.home-info-avatar img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #e5e7eb;
+    transition: transform 0.3s ease;
+}
 
-.article-content.madness-style h2 { /* 选择器：在 madness-style 容器内的 h2 标题 */
-  font-size: 2em; /* 字体大小：2倍父元素字体大小，比 h1 稍小 */
-  font-weight: 800; /* 字体粗细：很粗（800），比 h1 稍细一点 */
-  color: #9b59b6; /* 标题颜色：紫色，与 h1 的红色形成对比 */
-  text-shadow: 2px 2px 0px #8e44ad; /* 文字阴影：单层阴影，向右下偏移2像素深紫色，创建3D效果 */
-  transform: rotate(1deg); /* 变换：顺时针旋转1度，与 h1 的旋转方向相反，增加变化 */
-  margin: 1.5em 0; /* 外边距：上下各1.5倍字体大小的间距 */
-} /* 结束 h2 标题样式块 */
+.home-info-avatar img:hover {
+    transform: scale(1.05);
+}
 
-.article-content.madness-style h3 { /* 选择器：在 madness-style 容器内的 h3 标题 */
-  font-size: 1.5em; /* 字体大小：1.5倍父元素字体大小，比 h2 更小 */
-  font-weight: 700; /* 字体粗细：粗体（700），标准粗体 */
-  color: #f39c12; /* 标题颜色：橙色，与前两个标题颜色形成对比 */
-  text-shadow: 1px 1px 0px #e67e22; /* 文字阴影：单层阴影，向右下偏移1像素深橙色，创建轻微3D效果 */
-  transform: rotate(-1deg); /* 变换：逆时针旋转1度，与 h2 的旋转方向相反 */
-  margin: 1em 0; /* 外边距：上下各1倍字体大小的间距 */
-} /* 结束 h3 标题样式块 */
+.home-info-subtitle {
+    font-size: 16px;
+    color: #6b7280;
+    margin: 0.5em 0 1em;
+    line-height: 1.5;
+}
 
-.article-content.madness-style p { /* 选择器：在 madness-style 容器内的段落（p元素） */
-  font-size: 1.1em; /* 字体大小：1.1倍父元素字体大小，比正常稍大 */
-  margin: 1em 0; /* 外边距：上下各1倍字体大小的间距，段落之间留出空间 */
-  text-align: justify; /* 文本对齐：两端对齐，让文字左右都对齐到边缘 */
-  transform: rotate(0.5deg); /* 变换：顺时针旋转0.5度，让段落文字有轻微倾斜 */
-} /* 结束段落样式块 */
+.home-info-bio {
+    margin: 12px 0;
+}
 
-.article-content.madness-style p:nth-child(even) { /* 选择器：在 madness-style 容器内的偶数段落（第2、4、6...个段落） */
-  transform: rotate(-0.5deg); /* 变换：逆时针旋转0.5度，与奇数段落相反，创建交替倾斜效果 */
-} /* 结束偶数段落样式块 */
+.home-info-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    margin: 16px 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
 
-.article-content.madness-style code { /* 选择器：在 madness-style 容器内的 code 元素（行内代码） */
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* 背景：135度角的线性渐变，从蓝紫色到紫色，非常醒目 */
-  color: #fff; /* 文字颜色：白色，在彩色背景上形成对比 */
-  padding: 3px 8px; /* 内边距：上下3像素，左右8像素，给代码文字留出空间 */
-  border-radius: 5px; /* 圆角：5像素的圆角 */
-  font-weight: bold; /* 字体粗细：粗体，让代码更突出 */
-  transform: rotate(-1deg); /* 变换：逆时针旋转1度，让代码块有倾斜效果 */
-  display: inline-block; /* 显示方式：行内块元素，允许设置宽高和变换，但保持行内特性 */
-} /* 结束行内代码样式块 */
+.home-info-link {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    color: #374151;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
 
-.article-content.madness-style pre { /* 选择器：在 madness-style 容器内的 pre 元素（代码块） */
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); /* 背景：135度角的线性渐变，从粉红色到红色，非常醒目 */
-  border: 3px dashed #e74c3c; /* 边框：3像素宽的红色虚线边框，非常夸张 */
-  border-radius: 20px; /* 圆角：20像素的大圆角，非常圆润 */
-  padding: 1.5em; /* 内边距：1.5倍字体大小的内边距，给代码留出大量空间 */
-  overflow-x: auto; /* 水平溢出：当代码行太长时，自动显示横向滚动条 */
-  transform: rotate(1deg); /* 变换：顺时针旋转1度，让代码块有倾斜效果 */
-  box-shadow: 5px 5px 0px rgba(0,0,0,0.2); /* 阴影：向右下偏移5像素，无模糊，20%透明度的黑色，创建硬阴影效果（类似纸片效果） */
-} /* 结束代码块样式块 */
+.home-info-link:hover {
+    background-color: #f3f4f6;
+}
 
-.article-content.madness-style blockquote { /* 选择器：在 madness-style 容器内的 blockquote 元素（引用块） */
-  border-left: 8px solid #e74c3c; /* 左边框：8像素宽的红色实线，非常粗的边框 */
-  border-right: 8px solid #3498db; /* 右边框：8像素宽的蓝色实线，左右边框颜色不同 */
-  padding: 1em 1.5em; /* 内边距：上下1倍字体大小，左右1.5倍字体大小 */
-  margin: 1.5em 0; /* 外边距：上下各1.5倍字体大小的间距 */
-  background: linear-gradient(90deg, #fff5f5 0%, #f0f8ff 100%); /* 背景：90度角的线性渐变，从淡红色到淡蓝色，水平渐变 */
-  border-radius: 10px; /* 圆角：10像素的圆角 */
-  font-size: 1.2em; /* 字体大小：1.2倍父元素字体大小，比正文稍大 */
-  font-weight: bold; /* 字体粗细：粗体，让引用内容更突出 */
-  transform: rotate(-1deg); /* 变换：逆时针旋转1度，让引用块有倾斜效果 */
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.1); /* 阴影：向右下偏移5像素，15像素模糊半径，10%透明度的黑色，创建柔和阴影 */
-} /* 结束引用块样式块 */
+.home-info-link svg {
+    margin-right: 6px;
+    flex-shrink: 0;
+}
 
-.article-content.madness-style strong { /* 选择器：在 madness-style 容器内的 strong 元素（加粗文字） */
-  color: #e74c3c; /* 文字颜色：红色，让加粗文字非常醒目 */
-  font-weight: 900; /* 字体粗细：最粗（900），非常粗 */
-  text-shadow: 1px 1px 0px rgba(0,0,0,0.1); /* 文字阴影：向右下偏移1像素，无模糊，10%透明度的黑色，创建轻微3D效果 */
-} /* 结束加粗文字样式块 */
+.home-info-link span {
+    font-size: 14px;
+}
 
-.article-content.madness-style em { /* 选择器：在 madness-style 容器内的 em 元素（斜体文字） */
-  color: #9b59b6; /* 文字颜色：紫色，与加粗文字形成对比 */
-  font-style: italic; /* 字体样式：斜体，标准斜体效果 */
-  font-weight: bold; /* 字体粗细：粗体，让斜体文字更突出 */
-} /* 结束斜体文字样式块 */
+/* 微信二维码悬浮效果 */
+.wechat-link {
+    position: relative;
+}
 
-/* 分类页面样式 */ /* CSS注释：标识下面代码块的作用：定义分类页面的样式 */
-.category-tech, /* 选择器：具有 category-tech 类的元素（技术分类） */
-.category-finance { /* 选择器：具有 category-finance 类的元素（金融分类），两个选择器共用样式 */
-  background: #f8f9fa; /* 背景色：非常浅的灰色，提供干净的背景 */
-  padding: 2em; /* 内边距：2倍字体大小的内边距（上下左右），给内容留出空间 */
-  border-radius: 10px; /* 圆角：10像素的圆角，让容器更柔和 */
-  border: 1px solid #e0e0e0; /* 边框：1像素宽的浅灰色实线边框，给容器添加边界 */
-} /* 结束技术和金融分类样式块 */
+.wechat-qrcode {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    display: none;
+}
 
-.category-madness { /* 选择器：具有 category-madness 类的元素（狂人日记分类） */
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* 背景：135度角的线性渐变，从蓝紫色到紫色，非常醒目 */
-  padding: 2em; /* 内边距：2倍字体大小的内边距（上下左右） */
-  border-radius: 20px; /* 圆角：20像素的大圆角，非常圆润 */
-  border: 5px dashed #fff; /* 边框：5像素宽的白色虚线边框，非常夸张 */
-  color: #fff; /* 文字颜色：白色，在彩色背景上形成对比 */
-  box-shadow: 10px 10px 0px rgba(0,0,0,0.2); /* 阴影：向右下偏移10像素，无模糊，20%透明度的黑色，创建硬阴影效果（类似纸片效果） */
-} /* 结束狂人日记分类样式块 */
+.wechat-link:hover .wechat-qrcode {
+    display: block;
+}
 
-/* Tag标签样式 */ /* CSS注释：标识下面代码块的作用：定义标签（Tag）的样式 */
-.tag-list { /* 选择器：具有 tag-list 类的元素（标签列表容器） */
-  display: flex; /* 显示方式：弹性布局（Flexbox），让标签横向排列 */
-  flex-wrap: wrap; /* 弹性换行：当空间不足时自动换行，标签可以多行显示 */
-  gap: 0.5em; /* 间距：标签之间的间距为0.5倍字体大小，统一且美观 */
-  margin: 1em 0; /* 外边距：上下各1倍字体大小的间距，标签列表与周围内容保持距离 */
-} /* 结束标签列表样式块 */
+.wechat-qrcode img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
 
-.tag-item { /* 选择器：具有 tag-item 类的元素（单个标签） */
-  display: inline-block; /* 显示方式：行内块元素，允许设置宽高但保持行内特性 */
-  padding: 0.3em 0.8em; /* 内边距：上下0.3倍字体大小，左右0.8倍字体大小，给标签文字留出空间 */
-  background: #3498db; /* 背景色：蓝色，标准标签颜色 */
-  color: #fff; /* 文字颜色：白色，在蓝色背景上形成对比 */
-  border-radius: 20px; /* 圆角：20像素的大圆角，让标签呈现胶囊形状（完全圆角） */
-  text-decoration: none; /* 文本装饰：无下划线等装饰（通常标签是链接，去掉默认的下划线） */
-  font-size: 0.9em; /* 字体大小：0.9倍父元素字体大小，让标签稍小一些 */
-  transition: all 0.3s ease; /* 过渡效果：所有属性变化时，0.3秒的缓动过渡，让交互更流畅 */
-} /* 结束标签样式块 */
+.home-info-about {
+    margin-top: 16px;
+    text-align: center;
+    padding: 0;
+}
 
-.tag-item:hover { /* 选择器：鼠标悬停时的标签（伪类选择器） */
-  background: #2980b9; /* 背景色：深蓝色，比正常状态更深，提供悬停反馈 */
-  transform: translateY(-2px); /* 变换：向上移动2像素，创建标签"浮起"的效果 */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 阴影：无水平偏移，向下偏移4像素，8像素模糊半径，20%透明度的黑色，创建阴影效果增强浮起感 */
-} /* 结束标签悬停样式块 */
+.home-info-about .button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    color: #374151;
+    text-decoration: underline;
+}
 
-.tag-item.madness-tag { /* 选择器：同时具有 tag-item 和 madness-tag 两个类的元素（狂人日记标签） */
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); /* 背景：135度角的线性渐变，从粉红色到红色，非常醒目 */
-  font-weight: bold; /* 字体粗细：粗体，让标签更突出 */
-  border: 2px solid #fff; /* 边框：2像素宽的白色实线边框，在渐变背景上添加边界 */
-} /* 结束狂人日记标签样式块 */
+.home-info-about .button:hover {
+    background: transparent;
+    transform: none;
+    box-shadow: none;
+    color: #111827;
+}
 
-.tag-item.madness-tag:hover { /* 选择器：鼠标悬停时的狂人日记标签 */
-  transform: rotate(5deg) scale(1.1); /* 变换：顺时针旋转5度并放大到1.1倍，创建夸张的悬停效果 */
-} /* 结束狂人日记标签悬停样式块 */
+.home-info .button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: #f3f4f6;
+    color: #374151;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+    text-decoration: none;
+}
 
-/* 布局样式 - 让分类导航显示在右侧 */ /* CSS注释：定义页面布局，使内容区域和右侧边栏并排显示 */
-.content-wrapper { /* 选择器：内容包装器，包含主内容和右侧边栏 */
-  display: flex; /* 显示方式：弹性布局（Flexbox），让子元素横向排列 */
-  gap: calc(var(--gap) * 2); /* 间距：使用主题定义的间距变量的2倍，在主内容和侧边栏之间留出更多空隙，让侧边栏更靠右 */
-  align-items: flex-start; /* 对齐方式：顶部对齐，让主内容和侧边栏从顶部开始对齐 */
-  max-width: calc(var(--main-width) + 300px + var(--gap) * 4); /* 最大宽度：主内容宽度 + 侧边栏宽度 + 更大的间距，限制整体宽度 */
-  margin: 0 auto; /* 外边距：上下0，左右自动，让容器在页面中居中 */
-} /* 结束内容包装器样式块 */
+.home-info .button:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-.main-content { /* 选择器：主内容区域 */
-  flex: 1; /* 弹性：占据剩余空间，让主内容区域可以扩展 */
-  min-width: 0; /* 最小宽度：0，防止flex子元素溢出 */
-} /* 结束主内容区域样式块 */
+.home-info .button-inner {
+    display: flex;
+    align-items: center;
+}
 
-.right-sidebar { /* 选择器：右侧边栏（分类导航） */
-  flex-shrink: 0; /* 弹性收缩：不允许收缩，保持固定宽度 */
-  width: 280px; /* 宽度：280像素，固定侧边栏宽度 */
-  padding: var(--gap); /* 内边距：使用主题定义的间距变量 */
-  background: var(--entry); /* 背景色：使用主题定义的条目背景色 */
-  border: 1px solid var(--border); /* 边框：1像素宽的边框，使用主题定义的边框颜色 */
-  border-radius: var(--radius); /* 圆角：使用主题定义的圆角值 */
-  position: sticky; /* 定位：粘性定位，当页面滚动时侧边栏会固定在顶部 */
-  top: calc(var(--header-height) + var(--gap)); /* 顶部距离：头部高度 + 间距，让侧边栏在滚动时保持在合适位置 */
-  max-height: calc(100vh - var(--header-height) - var(--gap) * 2); /* 最大高度：视口高度减去头部和间距，防止侧边栏超出屏幕 */
-  overflow-y: auto; /* 垂直溢出：当内容超出时显示滚动条 */
-} /* 结束右侧边栏样式块 */
+@media (max-width: 768px) {
+    .home-info-avatar img {
+        width: 120px;
+        height: 120px;
+    }
+}
 
-.right-sidebar h3 { /* 选择器：右侧边栏内的 h3 标题（"📚 分类导航"） */
-  margin: 0 0 0.8em 0; /* 外边距：上下0，下边0.8倍字体大小，减少标题和内容之间的间距 */
-  font-size: 1.1em; /* 字体大小：1.1倍父元素字体大小 */
-  font-weight: 600; /* 字体粗细：半粗体 */
-  color: var(--primary); /* 文字颜色：使用主题定义的主色 */
-} /* 结束侧边栏标题样式块 */
+/* 首页：固定在整个页面右侧中部的个人信息卡片 */
+.home-sidebar-fixed {
+    position: fixed;
+    top: 20px;
+    right: 100px;
+    transform: none;
+    max-width: 260px;
+    z-index: 9999;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-.right-sidebar .category-item { /* 选择器：侧边栏内的分类项 */
-  margin-bottom: 0.4em; /* 下边距：0.4倍字体大小，减少分类项之间的间距 */
-  padding-bottom: 0.4em; /* 下内边距：0.4倍字体大小，减少分类项内部间距 */
-  border-bottom: 1px solid var(--border); /* 底部边框：1像素宽的边框，分隔各个分类项 */
-} /* 结束分类项样式块 */
+/* 滚动时隐藏个人信息模块 */
+.scrolled .home-sidebar-fixed {
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+}
 
-.right-sidebar .category-item:last-child { /* 选择器：最后一个分类项 */
-  border-bottom: none; /* 底部边框：无，去掉最后一个分类项的底部边框 */
-  margin-bottom: 0; /* 下边距：0，去掉最后一个分类项的下边距 */
-  padding-bottom: 0; /* 下内边距：0，去掉最后一个分类项的下内边距 */
-} /* 结束最后一个分类项样式块 */
+.home-sidebar-fixed .home-info {
+    margin-bottom: 0;
+    padding: 16px 18px;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 12px;
+    border: none;
+}
 
-.right-sidebar .category-item a { /* 选择器：分类项内的链接 */
-  color: var(--primary); /* 文字颜色：使用主题定义的主色 */
-  text-decoration: none; /* 文本装饰：无下划线 */
-  transition: color 0.2s ease; /* 过渡效果：颜色变化时0.2秒缓动过渡 */
-  display: flex; /* 显示方式：弹性布局，让分类名和数量在同一行显示 */
-  align-items: center; /* 对齐方式：垂直居中对齐，让分类名和数量垂直对齐 */
-  justify-content: space-between; /* 对齐方式：两端对齐，让分类名在左，数量在右 */
-} /* 结束分类链接样式块 */
+.home-sidebar-fixed .home-info-content {
+    max-width: 100%;
+}
 
-.right-sidebar .category-item a:hover { /* 选择器：鼠标悬停时的分类链接 */
-  color: var(--theme); /* 文字颜色：使用主题色，创建悬停效果 */
-} /* 结束分类链接悬停样式块 */
+.home-sidebar-fixed .home-info-avatar {
+    margin-bottom: 12px;
+}
 
-.right-sidebar .category-item .category-name { /* 选择器：分类名称 */
-  flex: 1; /* 弹性：占据剩余空间，让分类名可以扩展 */
-} /* 结束分类名称样式块 */
+.home-sidebar-fixed .home-info-avatar img {
+    width: 100px;
+    height: 100px;
+    border: none;
+}
 
-.right-sidebar .category-item .count { /* 选择器：分类项内的计数（文章数量） */
-  color: var(--secondary); /* 文字颜色：使用主题定义的次要颜色，让数字不那么突出 */
-  font-size: 0.9em; /* 字体大小：0.9倍父元素字体大小，让数字稍小一些 */
-  margin-left: 0.5em; /* 左外边距：0.5倍字体大小，让数字和分类名之间有间距 */
-  white-space: nowrap; /* 空白处理：不换行，确保数量在同一行显示 */
-} /* 结束分类计数样式块 */
+.home-sidebar-fixed .home-info-subtitle {
+    font-size: 14px;
+}
 
-/* 响应式设计 - 小屏幕时侧边栏移到下方 */ /* CSS注释：在小屏幕设备上，将侧边栏移到主内容下方 */
-@media (max-width: 768px) { /* 媒体查询：当屏幕宽度小于等于768像素时应用以下样式 */
-  .content-wrapper { /* 选择器：内容包装器 */
-    flex-direction: column; /* 弹性方向：纵向排列，让主内容和侧边栏上下堆叠 */
-  } /* 结束响应式内容包装器样式块 */
+.home-sidebar-fixed .home-info-links {
+    margin: 12px 0;
+}
 
-  .right-sidebar { /* 选择器：右侧边栏 */
-    width: 100%; /* 宽度：100%，占据整行 */
-    position: static; /* 定位：静态定位，取消粘性定位 */
-    max-height: none; /* 最大高度：无限制 */
-    margin-top: var(--gap); /* 上外边距：使用主题定义的间距，在主内容和侧边栏之间留出空隙 */
-  } /* 结束响应式侧边栏样式块 */
-} /* 结束响应式媒体查询样式块 */
+.home-sidebar-fixed .home-info-about {
+    margin-top: 12px;
+}
+
+@media (max-width: 1100px) {
+    .home-sidebar-fixed {
+        display: none;
+    }
+}

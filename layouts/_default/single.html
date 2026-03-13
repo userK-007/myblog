@@ -68,4 +68,10 @@
   {{- partial "comments.html" . -}}
 {{- end }}
 
+{{- if site.Params.homeInfoParams }}
+<aside class="home-sidebar-fixed">
+  {{- partial "home_info.html" . }}
+</aside>
+{{- end }}
+
 {{- end }}
