@@ -44,87 +44,65 @@
 }
 
 .home-info-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+    justify-content: center;
     margin: 16px 0;
     width: 100%;
-    flex-wrap: wrap;
 }
 
 .home-info-link {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
     padding: 6px 10px;
-    color: #374151;
+    color: var(--primary);
     text-decoration: none;
     border-radius: 6px;
     transition: background-color 0.3s ease;
     position: relative;
+    width: 100%;
+    min-width: 0;
 }
 
 .home-info-link:hover {
-    background-color: #f3f4f6;
+    background-color: var(--tertiary);
 }
 
-.home-info-link svg {
-    margin-right: 6px;
+.home-info-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-info-icon svg,
+.home-info-link .social-icon {
+    width: 18px;
+    height: 18px;
     flex-shrink: 0;
-}
-
-.home-info-link span {
-    font-size: 14px;
-}
-
-/* 微信二维码悬浮效果 */
-.wechat-link {
-    position: relative;
-}
-
-.wechat-qrcode {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    margin-top: 8px;
-    background: white;
-    padding: 8px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    z-index: 10000;
-    display: none;
-}
-
-.wechat-link:hover .wechat-qrcode {
     display: block;
 }
 
-.wechat-qrcode img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
+.home-info-label {
+    font-size: 14px;
+    line-height: 1;
+}
+
+@media (max-width: 520px) {
+    .home-info-links {
+        grid-template-columns: 1fr;
+    }
 }
 
 .home-info-about {
     margin-top: 16px;
     text-align: center;
     padding: 0;
-}
-
-.home-info-about .button {
-    background: transparent;
-    border: none;
-    padding: 0;
-    font-size: 14px;
-    color: #374151;
-    text-decoration: underline;
-}
-
-.home-info-about .button:hover {
-    background: transparent;
-    transform: none;
-    box-shadow: none;
-    color: #111827;
 }
 
 .home-info .button {
@@ -145,6 +123,24 @@
     background: #e5e7eb;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.home-info-about .button {
+    padding: 6px 10px;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    font-weight: inherit;
+    color: var(--primary);
+    box-shadow: none;
+}
+
+.home-info-about .button:hover {
+    background-color: var(--tertiary);
+    transform: none;
+    box-shadow: none;
+    color: var(--primary);
 }
 
 .home-info .button-inner {
