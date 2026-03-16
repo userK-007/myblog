@@ -50,14 +50,17 @@ ignoreErrors = ['error-output-taxonomy']
   comments = true
   [params.Comments.giscus]
     repo = "userK-007/myblog"
-    repoId = "R_xxxxxxxxxx"
+    repoId = "R_kgDORBiD2g"
     category = "General"
-    categoryId = "DIC_kwxxxxxxxxxx"
+    categoryId = "DIC_kwDORBiD2s4C1cjh"
     mapping = "pathname"
     strict = "0"
     reactionsEnabled = "1"
     emitMetadata = "0"
     inputPosition = "bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
 
   [params.fuseOpts]
     isCaseSensitive = false

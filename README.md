@@ -1,4 +1,4 @@
-## 项目概览
+## 概览
 
 这是一个使用 **Hugo** 与 **PaperMod** 主题构建的个人博客，部署在 **GitHub Pages** 上，用来记录：
 
@@ -6,11 +6,9 @@
 - **金融**：投资、宏观、金融科技
 - **狂人日记**：一些不那么严肃的思考
 
-线上地址（生产环境）示例：
+线上地址：
 
 - `https://userk-007.github.io/myblog/`
-
-本地通过 Hugo 启动开发服务器预览。
 
 ---
 
@@ -22,6 +20,10 @@
 - **脚本**：`assets/js/fastsearch.js`、`assets/js/scroll.js`
 - **部署目标**：`public/` 目录，推送到 GitHub Pages
 
+---
+## 二次开发
+
+下载项目后用claude、codex、cursor、tare、qoder等修改即可
 ---
 
 ## 目录结构（精简版）

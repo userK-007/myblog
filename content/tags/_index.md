@@ -1,6 +1,6 @@
 ---
 title: "标签"
-description: "所有文章标签"
+description: "同一标签下的所有文章"
 ---
 
 # 标签
