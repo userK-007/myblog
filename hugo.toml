@@ -32,11 +32,11 @@ ignoreErrors = ['error-output-taxonomy']
   # 首页信息
   [params.homeInfoParams]
     title = "userK-007"
-    imageUrl = "/blogAvatar.png"
+    imageUrl = "blogAvatar.png"
     email = "Chatgptlaoliu@proton.me"
     git = "https://github.com/userK-007"
     telegram = "https://t.me/yourusername"
-    x = "https://twitter.com/yourusername"
+    x = "https://x.com/qiangdongl85523"
     aboutme = "/about/"
   
   ShowReadingTime = true
