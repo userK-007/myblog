@@ -1,4 +1,4 @@
-baseURL = 'https://userK-007.github.io/myblog/'
+baseURL = 'https://userk-007.github.io/myblog/'
 languageCode = 'zh-cn'
 title = 'userK-007的个人博客'
 theme = 'PaperMod'
@@ -10,7 +10,8 @@ ignoreErrors = ['error-output-taxonomy']
   mainSections = ['tech', 'finance', 'madness']
   keywords = ['博客', '技术', '金融', '随笔']
   author = 'userK-007'
-  images = ['/logo.png']
+  # 用于 OpenGraph/Twitter 卡片的默认图片（站内相对路径，避免 GitHub Pages 子路径下 404）
+  images = ['blogAvatar.png']
   
   # 社交链接
   [[params.socialIcons]]
@@ -46,10 +47,9 @@ ignoreErrors = ['error-output-taxonomy']
   ShowWordCount = true
   ShowRssButtonInSectionTermList = true
   UseHugoToc = true
-
   comments = true
   [params.Comments.giscus]
-    repo = "userK-007/myblog"
+    repo = "userk-007/myblog"
     repoId = "R_kgDORBiD2g"
     category = "General"
     categoryId = "DIC_kwDORBiD2s4C1cjh"
@@ -58,9 +58,6 @@ ignoreErrors = ['error-output-taxonomy']
     reactionsEnabled = "1"
     emitMetadata = "0"
     inputPosition = "bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    crossorigin="anonymous"
 
   [params.fuseOpts]
     isCaseSensitive = false
