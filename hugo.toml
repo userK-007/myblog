@@ -49,7 +49,7 @@ ignoreErrors = ['error-output-taxonomy']
   UseHugoToc = true
   comments = true
   [params.Comments.giscus]
-    repo = "userk-007/myblog"
+    repo = "userK-007/myblog"
     repoId = "R_kgDORBiD2g"
     category = "General"
     categoryId = "DIC_kwDORBiD2s4C1cjh"

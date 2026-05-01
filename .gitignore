@@ -14,6 +14,7 @@ package-lock.json
 *.swo
 *~
 .qoder
+.trae/
 
 # OS
 .DS_Store
