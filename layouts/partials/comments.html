@@ -1,5 +1,8 @@
 {{- if .Site.Params.Comments.giscus }}
-<div id="giscus_thread"></div>
+{{- /* Giscus 根据 data-lang 请求 https://giscus.app/<lang>/widget —— 路径需与官网一致（如 zh-CN），Hugo 的 languageCode=zh-cn 会误用 /zh-cn/ */ -}}
+{{- $raw := .Site.LanguageCode | default "zh-CN" -}}
+{{- $giscusLang := cond (eq (lower $raw) "zh-cn") "zh-CN" $raw -}}
+<div id="giscus_thread" class="giscus"></div>
 <script src="https://giscus.app/client.js"
         data-repo="{{ .Site.Params.Comments.giscus.repo }}"
         data-repo-id="{{ .Site.Params.Comments.giscus.repoId }}"
@@ -11,7 +14,7 @@
         data-emit-metadata="{{ .Site.Params.Comments.giscus.emitMetadata | default "0" }}"
         data-input-position="{{ .Site.Params.Comments.giscus.inputPosition | default "bottom" }}"
         data-theme="preferred_color_scheme"
-        data-lang="{{ .Site.LanguageCode | default "zh-CN" }}"
+        data-lang="{{ $giscusLang }}"
         crossorigin="anonymous"
         async>
 </script>
