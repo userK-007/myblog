@@ -11,3 +11,13 @@
 {{- $scrollJS = $scrollJS | minify | fingerprint }}
 <script src="{{ $scrollJS.RelPermalink }}" integrity="{{ $scrollJS.Data.Integrity }}"></script>
 {{- end }}
+
+{{- /* Mermaid 图表（文章页） */ -}}
+{{- if .IsPage }}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+{{- $mermaidJS := resources.Get "js/mermaid-init.js" }}
+{{- if $mermaidJS }}
+{{- $mermaidJS = $mermaidJS | minify | fingerprint }}
+<script src="{{ $mermaidJS.RelPermalink }}" integrity="{{ $mermaidJS.Data.Integrity }}" defer></script>
+{{- end }}
+{{- end }}
