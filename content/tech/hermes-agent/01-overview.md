@@ -10,8 +10,6 @@ ShowToc: true
 comments: true
 ---
 
-> 本文基于 Hermes Agent v0.20.0（tag `v2026.8.3`，commit `3c27eb623`）源码，文中所有文件路径与行号均以该版本为准。
-
 ## Hermes Agent 是什么
 
 Hermes 是 Nous Research 开源的自主 AI 智能体。Claude Code、OpenClaw 等框架要么是无状态的，要么只有被动记忆——你告诉它记住什么，它才记住什么。Hermes Agent 最核心的差异化能力，是一套闭环学习系统——从执行轨迹中自动提炼并持续优化技能的学习闭环。Hermes 的记忆是主动积累的：它观察你，自己总结，自己改进。
@@ -296,8 +294,6 @@ flowchart TB
 5 `smart_model_routing` 只出现在配置与 setup 默认值中，没有按步换模型的运行时实现。插件用户目录的实现是 `get_hermes_home() / "plugins"`，不是写死的 `~/.hermes/plugins/`。
 
 6 公开介绍里把技能复盘触发写成「工具调用超过 5 次」或「每次复杂任务必生成 SKILL.md」，源码里是计数器达到默认 10 之后 fork 审查 Agent，是否落盘由该审查决定。
-
-
 
 ## 小结
 
